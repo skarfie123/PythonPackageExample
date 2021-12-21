@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name="PythonPackageExample",
@@ -11,4 +11,9 @@ setup(
     url="https://github.com/skarfie123/PythonPackageExample",
     packages=["package", "package.subpackage"],
     package_dir={"": "src"},
+    entry_points={
+        "console_scripts": [
+            "pythonpackageexample = package.__main__:main",
+        ]
+    },
 )
