@@ -1,4 +1,5 @@
-from . import greeting
-h = greeting.hello
+from .greeting import hello as h
+
+
 def hello():
     h("package.module")
